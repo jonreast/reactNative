@@ -10,7 +10,7 @@ export default class Pikachu extends Component {
     }
 
     return(
-      <View style={{alignItems: 'center', padding: 100}}>
+      <View style={styles.container}>
         <Image source={pic} style={{width: 210, height: 220}} />
         <Greeting name='Pikachu' />
         <Blink text='I LOVE YOU!' />
@@ -22,7 +22,7 @@ export default class Pikachu extends Component {
 class Greeting extends Component {
  render() {
    return(
-     <Text>Hello {this.props.name}</Text>
+     <Text style={styles.blue}>Hello {this.props.name}</Text>
    )
  } 
 }
@@ -56,5 +56,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    fontFamily: 'Arial',
   },
+  blue: {
+    color: 'blue',
+    fontWeight: 'bold',
+  }
 });
